@@ -24,7 +24,7 @@ export class GameControlComponent implements OnInit {
   onStart() {
     this.interval = setInterval(() => {
       this.gameEmitter.emit(this.count++);
-      this.callMethod();
+      console.log('Index:',this.count);
       this.onEachInterval(this.count);
     }, 1000);
   }
@@ -32,11 +32,7 @@ export class GameControlComponent implements OnInit {
   // When stopping the game, no more events should get emitted (clearInterval(ref))
   onPause() {
     clearInterval(this.interval);
-    console.log('Game stopped.');
-  }
-
-  callMethod(){
-    console.log('Index:',this.count);
+    console.log('Game pause.');
   }
 
   onEachInterval(count: number) {
@@ -47,9 +43,5 @@ export class GameControlComponent implements OnInit {
     }
   }
 
-  // ngOnDestroy() {
-  //   this.callMethod();
-  //   console.log('Game stopped.')
-  // }
 }
 

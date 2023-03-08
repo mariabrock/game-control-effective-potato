@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'game';
-// https://github.com/jscharnitzke/udemy-angular-basics-assignment-4/blob/master/src/app/app.component.html
 }
