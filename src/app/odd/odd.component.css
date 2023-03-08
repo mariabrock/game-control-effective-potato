@@ -1,3 +1,4 @@
-.odd {
+p {
   background: darkorange;
 }
+/*we can just use the p-tag because of angular's view encapsulation*/
